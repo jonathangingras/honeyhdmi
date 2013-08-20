@@ -2,20 +2,7 @@
 
 export DISPLAY=:8.0
 
-case $1 in
-	xfce)
-		optirun startxfce4 &
-	;;
-	openbox)
-		optirun openbox-session &
-	;;
-	kde)
-		optirun startkde &
-	;;
-	*)
-		optirun openbox-session &
-	;;
-esac
+optirun openbox-session
 
 sleep 2
 synergys -f -a 127.0.0.1 --display :0 -n laptop &
