@@ -17,10 +17,10 @@ This project is intended to provide an easy GUI to run external display using on
 <h3>INSTALL</h3>
 
 <code>
-$ qmake-qt4 # or any equivalent qmake command
-$ make
-$ gcc ./obwrap/honeyhdmi_obwrap.c -o honeyhdmi_obwrap
-$ mv honeyhdmi_obwrap # somewhere in your $PATH
-$ mv hdmi #somewhere in your $PATH
-$ mv honeyhdmi #somewhere in your $PATH
+$ qmake-qt4 # or any equivalent qmake command <br>
+$ make<br>
+$ gcc ./obwrap/honeyhdmi_obwrap.c -o honeyhdmi_obwrap<br>
+$ mv honeyhdmi_obwrap # somewhere in your $PATH<br>
+$ mv hdmi #somewhere in your $PATH<br>
+$ mv honeyhdmi #somewhere in your $PATH<br>
 </code>
