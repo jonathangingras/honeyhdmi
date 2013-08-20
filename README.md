@@ -8,11 +8,11 @@ This project is intended to provide an easy GUI to run external display using on
 
 <h3>Requirements:</h3>
 
--Bumblebee
--Synergy
--Openbox (only required for external display)
--Qt4
--xscreensaver(optional)
+-Bumblebee<br>
+-Synergy<br>
+-Openbox (only required for external display)<br>
+-Qt4<br>
+-xscreensaver(optional)<br>
 
 <h3>INSTALL</h3>
 
