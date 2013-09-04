@@ -5,35 +5,8 @@
 
 #define BUF_LEN 128
 
-char * exec(const char* cmd)
-{
-    FILE* pipe = popen(cmd, "r");
-    if (!pipe) return "ERROR";
-    char buffer[BUF_LEN];
-    
-    fseek(pipe, 0L, SEEK_END);
-    int table_len = ftell(pipe);
-    fseek(pipe, 0L, SEEK_SET);
-
-    char * res = (char *) malloc( (size_t)( table_len + sizeof(char) ) );
-
-    fgets(res, BUF_LEN, pipe);
-
-    while(!feof(pipe))
-    {
-        if(fgets(buffer, BUF_LEN, pipe) != NULL)
-            strcat(res, buffer);
-    }
-    pclose(pipe);
-
-    return res;
-}
-
 int main(int argc, char const *argv[])
 {
-	char * openbox = "openbox";
-	char ** session;
-
 	if(argc == 2)
 	{
 		session = &argv[1];
@@ -69,11 +42,9 @@ int main(int argc, char const *argv[])
 	strcat(path_dest, path);
 	strcat(s_mng_dest, s_mng);
 
-	printf("%s\n", *session);
-
 	char *env[] = {user_dest, home_dest, path_dest, s_mng_dest, NULL};
 
-	char *args[] = {"hdmi", *session, NULL};
+	char *args[] = {"hdmi", NULL};
 
 	execvpe("hdmi", args, env);
 }
