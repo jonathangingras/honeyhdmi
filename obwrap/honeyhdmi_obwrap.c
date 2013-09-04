@@ -7,17 +7,12 @@
 
 int main(int argc, char const *argv[])
 {
-	if(argc == 2)
+	if(argc != 1)
 	{
-		session = &argv[1];
-	}
-	else if(argc == 1)
-	{
-		session = &openbox;
-	}
-	else
+		printf("This wrapper takes no argument.");
 		return 1;
-
+	}	
+	
 	const char * user = getlogin();
 	const char * path = getenv("PATH");
 	const char * s_mng = getenv("SESSION_MANAGER");
